@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Luna Mini - Pequenos mundos, grandes histórias. Book Nooks e cenários em miniatura.">
+    <title>Luna Mini | Pequenos Mundos, Grandes Histórias</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilo CSS Externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / BARRA DE NAVEGAÇÃO -->
+    <header role="banner">
+        <div class="nav-container">
+            <a href="#" class="brand-logo" aria-label="Luna Mini Página Inicial">
+                <img src="logo.jpg" alt="Luna Mini Logo" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=100&auto=format&fit=crop&q=80'">
+                <div class="brand-text">
+                    <h1>LUNA MINI</h1>
+                    <p>Pequenos mundos, grandes histórias</p>
+                </div>
+            </a>
+            
+            <nav class="nav-store-btns" aria-label="Lojas e Redes Sociais">
+                <a href="https://www.instagram.com/lunamini.shop?exln=YzBvb2RlMHdzZHFi" target="_blank" rel="noopener noreferrer" class="btn-store btn-insta" tabindex="0">
+                    <i class="fab fa-instagram" aria-hidden="true"></i> <span>Instagram</span>
+                </a>
+                <a href="https://www.mercadolivre.com.br/pagina/larissalunas#from=share_eshop" target="_blank" rel="noopener noreferrer" class="btn-store btn-ml" tabindex="0">
+                    <i class="fas fa-shopping-bag" aria-hidden="true"></i> <span>Mercado Livre</span>
+                </a>
+                <a href="https://br.shp.ee/2p3CBxsT" target="_blank" rel="noopener noreferrer" class="btn-store btn-shopee" tabindex="0">
+                    <i class="fas fa-store" aria-hidden="true"></i> <span>Shopee</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <span class="hero-badge">✨ Encanto em Miniatura</span>
+            <h2>Transforme sua estante em um universo mágico</h2>
+            <p>A Luna Mini nasceu para quem acredita que os pequenos detalhes podem transformar um espaço. Descubra nossos Book Nooks e mini cenários encantadores.</p>
+        </section>
+
+        <!-- SEÇÃO DE OPÇÕES DE EXPERIÊNCIA (DIY vs MONTADO) -->
+        <section class="experiences">
+            <h2 class="section-title">Como você deseja viver essa experiência?</h2>
+            <div class="exp-grid">
+                <div class="exp-card" tabindex="0">
+                    <div class="exp-icon"><i class="fas fa-puzzle-piece" aria-hidden="true"></i></div>
+                    <h3>Opção DIY (Faça Você Mesmo)</h3>
+                    <p>Monte o seu próprio mundo! Perfeito para quem ama criar, montar peça por peça e acompanhar cada detalhe ganhando vida.</p>
+                </div>
+                <div class="exp-card" tabindex="0">
+                    <div class="exp-icon"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+                    <h3>Opção Montado</h3>
+                    <p>A Luna Mini monta para você! Receba sua peça prontinha, cuidada nos mínimos detalhes e pronta para decorar o seu cantinho especial.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATÁLOGO DE PRODUTOS -->
+        <section class="catalog" id="catalogo">
+            <h2 class="section-title">Nossa Coleção</h2>
+            <div class="product-grid" id="productGrid">
+                <!-- Cards de produtos renderizados via script.js -->
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE VÍDEO E EMBALAGEM -->
+        <section class="video-section">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video controls poster="PosterLogo.jpg" preload="metadata" aria-label="Vídeo do processo de embalagem e montagem dos Book Nooks da Luna Mini">
+                        <source src="WhatsApp Video 2026-10-09 at 14.07.49.mp4" type="video/mp4">
+                        Seu navegador não suporta a exibição de vídeos.
+                    </video>
+                </div>
+                <div class="video-details">
+                    <h3>Cuidado em Cada Detalhe ✨</h3>
+                    <div class="video-caption">
+                        <p>📦✨ <strong>Um pedido Luna Mini saindo por aqui!</strong></p>
+                        <p>Book nook montado, pronto pra decorar seu cantinho. Da nossa mesa, para sua casa, com cuidado e muito carinho!</p>
+                        <p class="hashtags">#booknook #miniaturas #diybrasil #decoração</p>
+                    </div>
+                    <p class="video-subtext">
+                        Cada peça que sai do nosso atelier é preparada com proteção especial, materiais sustentáveis e com um toque mágico de carinho para chegar perfeito até você.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer role="contentinfo">
+        <img src="logo.jpg" alt="Luna Mini Logo" class="footer-logo" onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=100&auto=format&fit=crop&q=80'">
+        <h3 class="footer-title">LUNA MINI</h3>
+        <p class="footer-subtitle">Pequenos mundos, grandes histórias.</p>
+        
+        <div class="footer-links">
+            <a href="https://www.instagram.com/lunamini.shop?exln=YzBvb2RlMHdzZHFi" target="_blank" rel="noopener noreferrer" class="btn-store btn-insta" tabindex="0">
+                <i class="fab fa-instagram" aria-hidden="true"></i> <span>Instagram (@lunamini.shop)</span>
+            </a>
+            <a href="https://www.mercadolivre.com.br/pagina/larissalunas#from=share_eshop" target="_blank" rel="noopener noreferrer" class="btn-store btn-ml" tabindex="0">
+                <i class="fas fa-shopping-bag" aria-hidden="true"></i> <span>Loja Mercado Livre</span>
+            </a>
+            <a href="https://br.shp.ee/2p3CBxsT" target="_blank" rel="noopener noreferrer" class="btn-store btn-shopee" tabindex="0">
+                <i class="fas fa-store" aria-hidden="true"></i> <span>Loja Shopee</span>
+            </a>
+        </div>
+
+        <p class="copy-text">&copy; 2026 Luna Mini. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- MODAL DE PRODUTO -->
+    <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Fechar janela de detalhes"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <h3 class="modal-title" id="modalTitle">Título do Produto</h3>
+            <div class="modal-price" id="modalPrice">R$ 0,00</div>
+            <p id="modalDesc" class="modal-desc"></p>
+            
+            <p class="modal-store-label">Comprar pelas nossas lojas oficiais:</p>
+            <div class="modal-store-btns">
+                <a href="https://www.mercadolivre.com.br/pagina/larissalunas#from=share_eshop" target="_blank" rel="noopener noreferrer" class="btn-store btn-ml" tabindex="0">
+                    Comprar no Mercado Livre
+                </a>
+                <a href="https://br.shp.ee/2p3CBxsT" target="_blank" rel="noopener noreferrer" class="btn-store btn-shopee" tabindex="0">
+                    Comprar na Shopee
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script JavaScript Externo -->
+    <script src="script.js"></script>
+</body>
+</html>

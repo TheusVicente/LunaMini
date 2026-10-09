@@ -1,0 +1,633 @@
+:root {
+    --color-bg-primary: #FAF6F0;
+    --color-bg-card: #FFFFFF;
+    --color-navy: #1C2331;
+    --color-gold: #C69251;
+    --color-gold-light: #E2BC83;
+    --color-text: #2C3E50;
+    --color-text-muted: #666666;
+    --color-cream-soft: #F3EBDD;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --radius-card: 16px;
+    --shadow-soft: 0 10px 30px rgba(28, 35, 49, 0.08);
+    --shadow-hover: 0 15px 35px rgba(198, 146, 81, 0.25);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-primary);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: radial-gradient(rgba(198, 146, 81, 0.12) 1px, transparent 0);
+    background-size: 28px 28px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* FOCO PARA SMART TVS / CONTROLE REMOTO / TECLADO */
+:focus-visible {
+    outline: 3px solid var(--color-gold) !important;
+    outline-offset: 4px !important;
+    border-radius: 8px;
+}
+
+/* NAVBAR RESPONSIVA */
+header {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 246, 240, 0.96);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(198, 146, 81, 0.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--color-gold);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background-color: #FAF6F0;
+}
+
+.brand-text h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    color: var(--color-navy);
+    letter-spacing: 1px;
+    line-height: 1;
+}
+
+.brand-text p {
+    font-size: clamp(0.6rem, 1vw, 0.72rem);
+    color: var(--color-gold);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.nav-store-btns {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-store {
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 42px;
+}
+
+.btn-ml {
+    background-color: #FFE600;
+    color: #2D3277;
+}
+
+.btn-ml:hover {
+    background-color: #f0d800;
+    transform: translateY(-2px);
+}
+
+.btn-shopee {
+    background-color: #EE4D2D;
+    color: #FFFFFF;
+}
+
+.btn-shopee:hover {
+    background-color: #d73f21;
+    transform: translateY(-2px);
+}
+
+.btn-insta {
+    background-color: #E1306C;
+    color: #FFFFFF;
+}
+
+.btn-insta:hover {
+    background-color: #c12a5b;
+    transform: translateY(-2px);
+}
+
+/* HERO SECTION RESPONSIVO */
+.hero {
+    padding: clamp(40px, 8vw, 80px) 24px clamp(30px, 5vw, 50px);
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: rgba(198, 146, 81, 0.15);
+    color: var(--color-gold);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.hero h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    color: var(--color-navy);
+    margin-bottom: 16px;
+    line-height: 1.25;
+}
+
+.hero p {
+    font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+    color: var(--color-text-muted);
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/* EXPERIÊNCIAS (DIY vs MONTADO) */
+.experiences {
+    max-width: 1000px;
+    margin: 0 auto clamp(40px, 6vw, 70px);
+    padding: 0 24px;
+}
+
+.section-title {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 3vw, 2.2rem);
+    color: var(--color-navy);
+    margin-bottom: clamp(20px, 4vw, 40px);
+}
+
+.exp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.exp-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-card);
+    padding: 30px;
+    border: 1px solid rgba(198, 146, 81, 0.2);
+    box-shadow: var(--shadow-soft);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.exp-card:hover, .exp-card:focus {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-gold);
+}
+
+.exp-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-cream-soft);
+    color: var(--color-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 16px;
+}
+
+.exp-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-navy);
+    margin-bottom: 10px;
+}
+
+.exp-card p {
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+}
+
+/* CATÁLOGO RESPONSIVO */
+.catalog {
+    max-width: 1200px;
+    margin: 0 auto clamp(50px, 8vw, 90px);
+    padding: 0 24px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(198, 146, 81, 0.15);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* AJUSTE PARA ENQUADRAR AS IMAGENS DOS PRODUTOS PERFEITAMENTE */
+.product-img-holder {
+    width: 100%;
+    height: 280px;
+    background: #FAF6F0; /* Fundo suave combinando com o tema caso a foto tenha proporção diferente */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-img-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Enquadra a foto inteira sem dar zoom ou cortar detalhes */
+    object-position: center;
+    transition: transform 0.3s ease;
+    padding: 8px; /* Dá um leve respiro interno elegante */
+}
+
+/* Efeito de leve zoom somente ao passar o mouse em telas de computador */
+@media (hover: hover) {
+    .product-card:hover .product-img-holder img {
+        transform: scale(1.03);
+    }
+}
+
+.product-card:hover .product-img-holder img {
+    transform: scale(1.06);
+}
+
+.product-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(28, 35, 49, 0.88);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.product-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-navy);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-gold);
+    margin-bottom: 12px;
+}
+
+.product-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.btn-view-details {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-navy);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-height: 44px;
+}
+
+.btn-view-details:hover, .btn-view-details:focus {
+    background: var(--color-gold);
+}
+
+/* VÍDEO RESPONSIVO */
+.video-section {
+    background: var(--color-cream-soft);
+    padding: clamp(40px, 6vw, 70px) 24px;
+    margin-bottom: clamp(50px, 8vw, 90px);
+    border-top: 1px solid rgba(198, 146, 81, 0.2);
+    border-bottom: 1px solid rgba(198, 146, 81, 0.2);
+}
+
+.video-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    align-items: center;
+}
+
+/* CONTAINER DO VÍDEO COM PROPORÇÃO VERTICAL CORRETA */
+.video-wrapper {
+    position: relative;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+    background: #000;
+    width: 100%;
+    max-width: 340px; /* Largura ideal para vídeos no formato Reels/Shorts */
+    aspect-ratio: 9 / 16; /* Força a proporção vertical exata */
+    margin: 0 auto;
+}
+
+/* AJUSTE DO VÍDEO E DA CAPA (POSTER) PARA PREENCHER SEM ESTICAR */
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta suavemente as bordas sem achatar ou esticar o vídeo */
+    object-position: center; /* Centraliza o conteúdo no meio da tela */
+    display: block;
+}
+
+.video-details h3 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.5vw, 1.8rem);
+    color: var(--color-navy);
+    margin-bottom: 16px;
+}
+
+.video-caption {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid var(--color-gold);
+    font-size: 0.92rem;
+    color: var(--color-text);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.video-caption p {
+    margin-bottom: 10px;
+}
+
+.hashtags {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.video-subtext {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* RODAPÉ RESPONSIVO */
+footer {
+    background: var(--color-navy);
+    color: #FFFFFF;
+    padding: 50px 24px 30px;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--color-gold);
+    margin-bottom: 16px;
+    background-color: #FAF6F0;
+}
+
+.footer-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.footer-subtitle {
+    font-size: 0.85rem;
+    color: var(--color-gold-light);
+    margin-bottom: 24px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.copy-text {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 20px;
+}
+
+/* MODAL RESPONSIVO */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.modal-card {
+    background: var(--color-bg-card);
+    border-radius: var(--radius-card);
+    max-width: 550px;
+    width: 100%;
+    padding: clamp(20px, 4vw, 32px);
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    animation: modalFadeIn 0.25s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--color-text-muted);
+    background: transparent;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.modal-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    color: var(--color-navy);
+    margin-bottom: 8px;
+    padding-right: 30px;
+}
+
+.modal-price {
+    font-size: 1.3rem;
+    color: var(--color-gold);
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.modal-desc {
+    color: var(--color-text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 20px;
+}
+
+.modal-store-label {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--color-navy);
+    margin-bottom: 12px;
+}
+
+.modal-store-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.modal-store-btns a {
+    flex: 1 1 200px;
+    text-align: center;
+    justify-content: center;
+}
+
+/* MEDIA QUERIES ESPECÍFICAS PARA DISPOSITIVOS */
+
+/* Smartphones (Até 576px) */
+@media (max-width: 576px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .brand-logo {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .nav-store-btns {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btn-store {
+        flex: 1 1 auto;
+        font-size: 0.78rem;
+        padding: 8px 12px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-store-btns {
+        flex-direction: column;
+    }
+}
+
+/* Smart TVs e Monitores Ultra-Wide (Acima de 1400px) */
+@media (min-width: 1400px) {
+    .nav-container, .hero, .experiences, .catalog, .video-container {
+        max-width: 1300px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
